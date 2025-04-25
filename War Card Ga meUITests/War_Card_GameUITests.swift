@@ -1,6 +1,6 @@
 //
-//  War_Card_Ga_meUITests.swift
-//  War Card Ga meUITests
+//  War_Card_GameUITests.swift
+//  War Card GameUITests
 //
 //  Created by Philipp Stanovov on 4/16/25.
 //
