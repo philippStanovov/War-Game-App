@@ -1,28 +1,18 @@
-//
 //  ContentView.swift
 //  War Card Game
-//
-//  Created by Philipp Stanovov on 4/16/25.
-//
+//  Created by Philipp Stanovov on 4/16/25
 
 import SwiftUI
-
 struct ContentView: View {
-  
     @State var playerCard = "card7"
     @State var cpuCard = "card13"
-    
     @State var playerScore = 0
     @State var cpuScore = 0
-    
     var body: some View {
-        
-        ZStack {
-            
+        ZStack { 
             Image ("background-plain")
                 .resizable()
-                .ignoresSafeArea()
-            
+                .ignoresSafeArea() 
             VStack {
                 Spacer();
                 Image ("logo")
@@ -35,15 +25,11 @@ struct ContentView: View {
                     Spacer();
                 }
                 Spacer();
-                
                 Button {
                     deal()
                 } label: {
                     Image("button")
                 }
-                
-                
-                
                 Spacer();
                 HStack {
                     Spacer();
@@ -52,8 +38,7 @@ struct ContentView: View {
                             .font(.headline)
                             .padding(.bottom,10.0)
                         Text(String(playerScore))
-                            .font(.largeTitle)
-                            
+                            .font(.largeTitle)     
                     }
                     Spacer();
                      VStack {
@@ -68,33 +53,23 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 Spacer();
             }
-            
-            
         }
-        
     }
-    
     func deal() {
         // Randomize the players cards
         var playerCardValue = Int.random(in: 2...14)
-        playerCard = "card" + String(playerCardValue)
-        
+        playerCard = "card" + String(playerCardValue)  
         // Randomize the cpus card
         var cpuCardValue = Int.random(in: 2...14)
         cpuCard = "card" + String(cpuCardValue)
-        
         // Update the score
         if playerCardValue > cpuCardValue {
             playerScore += 1
         } else if playerCardValue < cpuCardValue {
             cpuScore += 1
         }
-         
     }
-    
-    
 }
 #Preview {
     ContentView()
 }
- 
