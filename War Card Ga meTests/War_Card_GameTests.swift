@@ -1,6 +1,6 @@
 //
-//  War_Card_Ga_meTests.swift
-//  War Card Ga meTests
+//  War_Card_GameTests.swift
+//  War Card GameTests
 //
 //  Created by Philipp Stanovov on 4/16/25.
 //
